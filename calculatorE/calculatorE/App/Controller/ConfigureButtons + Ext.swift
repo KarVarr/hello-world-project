@@ -21,6 +21,7 @@ extension ViewController {
         minusButton.button.setTitle("-", for: .normal)
         dividedButton.button.setTitle("÷", for: .normal)
         multiplyButton.button.setTitle("×", for: .normal)
+        acButton.button.setTitle("AC", for: .normal)
         equalButton.button.setTitle("=", for: .normal)
         
         [plusButton, minusButton, dividedButton, multiplyButton, equalButton].forEach{
@@ -32,7 +33,10 @@ extension ViewController {
         equalButton.button.backgroundColor = .green
         equalButton.button.addTarget(self, action: #selector(equalPressed), for: .touchUpInside)
         
-        
+        acButton.button.backgroundColor = .red
+        acButton.button.layer.cornerRadius = 2
+        acButton.button.addTarget(self, action: #selector(acPressed), for: .touchUpInside)
+
         
     }
 }

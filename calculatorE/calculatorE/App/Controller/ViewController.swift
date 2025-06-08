@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     let dividedButton = ButtonViewCustom()
     let multiplyButton = ButtonViewCustom()
     let equalButton = ButtonViewCustom()
+    let acButton = ButtonViewCustom()
     
     let numberStack = StackViewCustom()
     let functionalityStack = StackViewCustom()
@@ -35,15 +36,19 @@ class ViewController: UIViewController {
     var currentInput: String = ""
     var isSecondNumber = false
     
-    private var displayValue: Int {
+    private var displayValue: Double {
         get {
-            guard let number = Int(resultView.label.text ?? "0") else {
+            guard let number = Double(resultView.label.text ?? "0") else {
                 fatalError("error")
             }
             return number
         }
         set {
-            resultView.label.text = String(newValue)
+            if newValue.truncatingRemainder(dividingBy: 1) == 0 {
+                resultView.label.text = String(Int(newValue))
+            } else {
+                resultView.label.text = String(newValue)
+            }
         }
     }
     
@@ -72,10 +77,14 @@ class ViewController: UIViewController {
             resultView.label.text = numValue
             isSecondNumber = false
         } else {
-            if resultView.label.text == "0" || resultView.label.text == nil {
-                resultView.label.text = numValue
+            if let text = resultView.label.text {
+                if text == "0" {
+                    resultView.label.text = numValue
+                } else {
+                    resultView.label.text = text + numValue
+                }
             } else {
-                resultView.label.text! += numValue
+                resultView.label.text = numValue
             }
         }
     }
@@ -87,9 +96,15 @@ class ViewController: UIViewController {
         if let result = calculator.calculate(symbol: "=") {
             displayValue = result
         } else {
-            resultView.label.text = "error"
+            resultView.label.text = "Don't do this 🤨"
         }
         isSecondNumber = true
+    }
+    
+    @objc func acPressed(_ sender: UIButton) {
+        displayValue = 0
+        calculator = Calculator()
+        isSecondNumber = false
     }
     
     

@@ -26,11 +26,8 @@ extension ViewController {
         
         let nums = [num1, num2, num3, num4, num5, num6, num7, num8, num9]
         let zero = num0
-        let funcButtons = [plusButton, minusButton, multiplyButton, dividedButton]
+        let funcButtons = [plusButton, minusButton, multiplyButton, dividedButton, acButton]
         let equal = equalButton
-        
-        
-        
         
         
         for row in 0 ..< 3 {
