@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     let minusButton = ButtonViewCustom()
     let dividedButton = ButtonViewCustom()
     let multiplyButton = ButtonViewCustom()
+    let equalButton = ButtonViewCustom()
     
     let numberStack = StackViewCustom()
     let functionalityStack = StackViewCustom()
@@ -31,7 +32,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
         
         addViews()
         configureStackView()
