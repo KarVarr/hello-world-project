@@ -1,5 +1,5 @@
 //
-//  ConfigureButtons.swift
+//  ConfigureButtons + Ext.swift
 //  calculatorE
 //
 //  Created by Karen Vardanian on 08.06.2025.
@@ -13,5 +13,10 @@ extension ViewController {
         for (index, button) in nums.enumerated() {
             button.button.setTitle(String(index), for: .normal)
         }
+        
+        plusButton.button.setTitle("+", for: .normal)
+        minusButton.button.setTitle("-", for: .normal)
+        dividedButton.button.setTitle("/", for: .normal)
+        multiplyButton.button.setTitle("*", for: .normal)
     }
 }

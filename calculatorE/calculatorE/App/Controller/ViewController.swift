@@ -19,19 +19,24 @@ class ViewController: UIViewController {
     let num7 = ButtonViewCustom()
     let num8 = ButtonViewCustom()
     let num9 = ButtonViewCustom()
+    
     let plusButton = ButtonViewCustom()
     let minusButton = ButtonViewCustom()
     let dividedButton = ButtonViewCustom()
     let multiplyButton = ButtonViewCustom()
     
+    let numberStack = StackViewCustom()
+    let functionalityStack = StackViewCustom()
+    let mainStack = StackViewCustom()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        
+        addViews()
+        configureStackView()
+        configureButtons()
+        layoutView()
     }
-    
-    
-
-
 }
 
