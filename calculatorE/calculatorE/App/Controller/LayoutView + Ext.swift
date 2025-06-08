@@ -18,9 +18,9 @@ extension ViewController {
         
         NSLayoutConstraint.activate([
             mainStack.SV.topAnchor.constraint(equalTo: resultView.label.bottomAnchor, constant: 20),
-            mainStack.SV.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            mainStack.SV.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            mainStack.SV.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
+            mainStack.SV.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mainStack.SV.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mainStack.SV.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 }

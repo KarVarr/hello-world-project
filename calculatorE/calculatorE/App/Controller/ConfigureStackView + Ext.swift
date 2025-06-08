@@ -26,7 +26,7 @@ extension ViewController {
         
         let nums = [num1, num2, num3, num4, num5, num6, num7, num8, num9]
         let zero = num0
-        let funcButtons = [plusButton, minusButton, multiplyButton, dividedButton, acButton]
+        let funcButtons = [plusButton, minusButton, multiplyButton, dividedButton]
         let equal = equalButton
         
         
@@ -50,6 +50,7 @@ extension ViewController {
         zeroRow.SV.distribution = .fillEqually
         zeroRow.SV.addArrangedSubview(zero.button)
         zeroRow.SV.addArrangedSubview(equal.button)
+        zeroRow.SV.addArrangedSubview(acButton.button)
         numberStack.SV.addArrangedSubview(zeroRow.SV)
         
         funcButtons.forEach {functionalityStack.SV.addArrangedSubview($0.button)}

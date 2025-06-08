@@ -12,7 +12,7 @@ class UILabelViewCustom {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 16, weight: .light)
+        label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
         label.text = "0"
         return label
     }()
